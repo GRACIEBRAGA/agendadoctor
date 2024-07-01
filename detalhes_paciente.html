@@ -1,0 +1,21 @@
+<!-- pacientes/templates/pacientes/detalhes_paciente.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ paciente.nome }}</title>
+</head>
+<body>
+    <h1>{{ paciente.nome }}</h1>
+    <p>Data de Nascimento: {{ paciente.data_nascimento }}</p>
+    <p>Telefone: {{ paciente.telefone }}</p>
+
+    <h2>Consultas</h2>
+    <ul>
+        {% for consulta in consultas %}
+            <li>{{ consulta.data_hora }} - {{ consulta.motivo }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'nova_consulta' paciente.pk %}">Nova Consulta</a>
+</body>
+</html>

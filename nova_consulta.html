@@ -1,0 +1,16 @@
+<!-- pacientes/templates/pacientes/nova_consulta.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nova Consulta</title>
+</head>
+<body>
+    <h1>Nova Consulta</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

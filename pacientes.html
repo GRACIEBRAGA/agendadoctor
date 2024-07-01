@@ -1,0 +1,16 @@
+<!-- pacientes/templates/pacientes/lista_pacientes.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pacientes</title>
+</head>
+<body>
+    <h1>Lista de Pacientes</h1>
+    <ul>
+        {% for paciente in pacientes %}
+            <li><a href="{% url 'detalhes_paciente' paciente.pk %}">{{ paciente.nome }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
